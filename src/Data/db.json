@@ -1,25 +1,25 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "name": "Admin",
-      "email": "admin@gmail.com",
-      "phone": "0987654321",
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "name": "Tuan Kiet",
-      "email": "kiet123@gmail.com",
-      "phone": "1234567890",
-      "role": "admin"
-    },
-    {
-      "name": "Tran Hoai Van",
-      "email": "van2342gmail.com",
-      "phone": "7834234923",
-      "role": "staff",
-      "id": 3
-    }
-  ]
+    "user": [
+        {
+            "id": 1,
+            "name": "Admin",
+            "email": "admin@gmail.com",
+            "phone": "0987654321",
+            "role": "admin"
+        },
+        {
+            "id": 2,
+            "name": "Tuan Kiet",
+            "email": "kiet123@gmail.com",
+            "phone": "1234567890",
+            "role": "admin"
+        },
+        {
+            "name": "Tran Hoai Van",
+            "email": "van2342gmail.com",
+            "phone": "7834234923",
+            "role": "staff",
+            "id": 3
+        }
+    ]
 }

@@ -6,11 +6,10 @@ import Userlisting from './Component/Userlisting';
 import Adduser from './Component/Adduser';
 import Updateuser from './Component/Updateuser';
 import { ToastContainer } from 'react-toastify';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import Store from './Redux/Store';
-import { selectUser } from './features/userSlide';
-import Logout from './Component/Logout';
 import Login from './Component/Login';
+
 
 
 function App() {
@@ -19,14 +18,15 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <div className='header'>
-            <Link to={'/home'}>Home</Link>
-            <Link to={'/user'}>User</Link>
-            <Link to={'/logout'}>Logout</Link>
+            <Link style={{ color: '#fff' }} to={'/home'}>Home</Link>
+            <Link style={{ color: '#fff' }} to={'/user'}>User</Link>
+            <Link style={{ float: 'right', backgroundColor: 'red', borderRadius: '5px' }} to="/">Logout</Link>
+
           </div>
           <Routes>
+            <Route path='/' element={<Login></Login>}></Route>
             <Route path='/home' element={<Home></Home>}></Route>
             <Route path='/user' element={<Userlisting></Userlisting>}></Route>
-            <Route path='/logout' element={<Logout></Logout>}></Route>
             <Route path='/user/add' element={<Adduser></Adduser>}></Route>
             <Route path='/user/edit/:code' element={<Updateuser></Updateuser>}></Route>
           </Routes>

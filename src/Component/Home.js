@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div>
+        <div style={{ color: 'wheat' }}>
             <h2>Welcome to my page</h2>
         </div>
     )

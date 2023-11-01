@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FetchUserList, Removeuser } from "../Redux/Action";
-import Logout from "./Logout";
+
 
 const Userlisting = (props) => {
     useEffect(() => {

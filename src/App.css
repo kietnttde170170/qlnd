@@ -16,8 +16,7 @@ body{
 }
 .header{
   width: 100%;
-  background-color: blue;
-  color: #fff;
+  background-color: rgb(211, 17, 250);
   padding: 1%;
   text-align: left;
 }
