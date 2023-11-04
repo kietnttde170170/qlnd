@@ -17,12 +17,6 @@ function App() {
     <Provider store={Store}>
       <div className="App">
         <BrowserRouter>
-          <div className='header'>
-            <Link style={{ color: '#fff' }} to={'/home'}>Home</Link>
-            <Link style={{ color: '#fff' }} to={'/user'}>User</Link>
-            <Link style={{ float: 'right', backgroundColor: 'red', borderRadius: '5px' }} to="/">Logout</Link>
-
-          </div>
           <Routes>
             <Route path='/' element={<Login></Login>}></Route>
             <Route path='/home' element={<Home></Home>}></Route>

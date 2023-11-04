@@ -17,10 +17,18 @@ const Userlisting = (props) => {
         }
     }
     return (
-        props.user.loading ? <div><h2>Loading...</h2></div> :
+        props.user.loading ? <div><h2 style={{ color: 'red' }}>Loading...</h2></div> :
             props.user.errmessage ? <div><h2>{props.user.errmessage}</h2></div> :
 
                 <div>
+                    <div>
+                        <div className='header'>
+                            <Link style={{ color: '#fff' }} to={'/home'}>Home</Link>
+                            <Link style={{ color: '#fff' }} to={'/user'}>User</Link>
+                            <Link style={{ float: 'right', backgroundColor: 'red', borderRadius: '5px' }} to="/">Logout</Link>
+
+                        </div>
+                    </div>
                     <div className="card">
                         <div className="card-header" >
                             <Link to={'/user/add'} className="btn btn-success">Add User</Link>
@@ -47,7 +55,7 @@ const Userlisting = (props) => {
                                                 <td>{item.phone}</td>
                                                 <td>{item.role}</td>
                                                 <td>
-                                                    <Link to={'/user/edit/' + item.id} className="btn btn-primary">Edit</Link> |
+                                                    <Link to={'/user/edit/' + item.id} className="btn btn-primary">Edit</Link> ||
                                                     <button onClick={() => { handledelete(item.id) }} className="btn btn-danger">Delete</button>
                                                 </td>
                                             </tr>

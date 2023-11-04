@@ -1,6 +1,5 @@
 import axios from "axios"
 import { toast } from "react-toastify"
-import Updateuser from "../Component/Updateuser"
 import { ADD_USER, DELETE_USER, FAIL_REQUEST, GET_USER_LIST, GET_USER_OBJ, MAKE_REQUEST, UPDATE_USER } from "./ActionType"
 
 export const makeRequest = () => {

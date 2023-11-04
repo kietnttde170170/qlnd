@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState } from "react";
 import './Login.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const navigate = useNavigate();
@@ -23,8 +26,22 @@ function Login() {
         e.preventDefault();
         setFormErrors(validate(formValues));
         if (Object.keys(formErrors).length === 0) {
-            navigate("/home");
+            if (isLogin(true)) {
+                toast.success('Login success!')
+                navigate("/home");
+            } else {
+                toast.error('Invalid account');
+            }
+
         }
+    };
+
+    const isLogin = () => {
+        const { username, password, email } = formValues;
+        if (username === 'admin' && password === '123123' && email === 'admin@gmail.com') {
+            return true;
+        }
+        return false;
     };
 
     const validate = (values) => {
@@ -87,9 +104,10 @@ function Login() {
                         />
                     </div>
                     <p>{formErrors.password}</p>
-                    <button className="fluid ui button blue" >Submit</button>
+                    <Button className="fluid ui button blue" onClick={handleClick}>Submit</Button>
                 </div>
             </form>
+
         </div>
     );
 }
