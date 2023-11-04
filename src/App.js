@@ -23,6 +23,7 @@ function App() {
             <Route path='/user' element={<Userlisting></Userlisting>}></Route>
             <Route path='/user/add' element={<Adduser></Adduser>}></Route>
             <Route path='/user/edit/:code' element={<Updateuser></Updateuser>}></Route>
+            <Route element={<h2 style={{ color: 'red', textAlign: 'center' }}>404 Not Found!</h2>} path="/*"></Route>
           </Routes>
         </BrowserRouter>
         <ToastContainer className="toast-position"
